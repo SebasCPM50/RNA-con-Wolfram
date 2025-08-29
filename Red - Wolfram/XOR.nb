@@ -1,0 +1,33 @@
+Notebook[{Cell[
+CellGroupData[{Cell[
+BoxData[{RowBox[{RowBox[{"inputs"," ","="," ",RowBox[
+{"{",RowBox[{RowBox[{"{",RowBox[{"0.",","," ","0."}],"}"}],","," ",RowBox[{"{",RowBox[
+{"0.",","," ","1."}],"}"}],","," ",RowBox[{"{",RowBox[{"1.",","," ","0."}],"}"}],","," ",RowBox[
+{"{",RowBox[{"1.",","," ","1."}],"}"}]}],"}"}]}],";"}],"\n",RowBox[{RowBox[{"salidaXOR"," ","="," ",RowBox[
+{"{",RowBox[{"0.",","," ","1.",","," ","1.",","," ","0."}],"}"}]}],";"}],RowBox[{"\n","\n"}],RowBox[
+{RowBox[{"redXOR"," ","="," ",RowBox[{"NetTrain","[","\n","  ",RowBox[{RowBox[{"NetChain","[",RowBox[
+{"{","\n","    ",RowBox[{RowBox[{"LinearLayer","[","4","]"}],","," ","Tanh",",","\n","    ",RowBox[
+{"LinearLayer","[","1","]"}],","," ","LogisticSigmoid"}],"\n","  ","}"}],"]"}],",","\n","  ",RowBox[
+{"Thread","[",RowBox[{"inputs"," ","\[Rule]"," ","salidaXOR"}],"]"}],",","\n","  ",RowBox[
+{"MaxTrainingRounds"," ","\[Rule]"," ","1500"}]}],"\n","]"}]}],";"}],RowBox[{"\n","\n"}],RowBox[
+{RowBox[{"TableForm","[","\n","  ",RowBox[{RowBox[{"Table","[","\n","    ",RowBox[
+{RowBox[{"{",RowBox[{RowBox[{"inputs","[",RowBox[{"[","i","]"}],"]"}],","," ",RowBox[
+{"salidaXOR","[",RowBox[{"[","i","]"}],"]"}],","," ",RowBox[{"Round","[",RowBox[{"redXOR","[",RowBox[
+{"inputs","[",RowBox[{"[","i","]"}],"]"}],"]"}],"]"}]}],"}"}],",","\n","    ",RowBox[
+{"{",RowBox[{"i",","," ",RowBox[{"Length","[","inputs","]"}]}],"}"}]}],"\n","  ","]"}],",","\n","  ",RowBox[
+{"TableHeadings"," ","\[Rule]"," ",RowBox[{"{",RowBox[{"None",","," ",RowBox[{"{",RowBox[
+{"\"x1,x2\"",","," ","\"XOR Real\"",","," ","\"XOR Pred\""}],"}"}]}],"}"}]}]}],"\n","]"}],"\n","\n"}]}],
+"Input",CellLabel -> "In[1]:= ",ExpressionUUID -> "71eb7657-f0c1-436d-90c6-bba4888b509d"],Cell[
+BoxData[
+InterpretationBox[GridBox[{{"\"x1,x2\"","\"XOR Real\"","\"XOR Pred\""},{GridBox[{{"0.`"},{"0.`"}},
+RowAlignments -> Baseline,ColumnAlignments -> Left,RowSpacings -> 0.25`,ColumnSpacings -> 1],"0.`","0"},{GridBox[
+{{"0.`"},{"1.`"}},RowAlignments -> Baseline,ColumnAlignments -> Left,RowSpacings -> 0.25`,
+ColumnSpacings -> 1],"1.`","1"},{GridBox[{{"1.`"},{"0.`"}},RowAlignments -> Baseline,
+ColumnAlignments -> Left,RowSpacings -> 0.25`,ColumnSpacings -> 1],"1.`","1"},{GridBox[
+{{"1.`"},{"1.`"}},RowAlignments -> Baseline,ColumnAlignments -> Left,RowSpacings -> 0.25`,
+ColumnSpacings -> 1],"0.`","0"}},RowAlignments -> Baseline,ColumnAlignments -> Center,
+RowSpacings -> 1,ColumnSpacings -> 3],TableForm[{{{0.`,0.`},0.`,0},{{0.`,1.`},1.`,1},{{1.`,0.`},1.`,1},{{1.`,1.`},0.`,0}},
+TableHeadings -> {None,{"x1,x2","XOR Real","XOR Pred"}}]],StandardForm],"Output",
+CellLabel -> "Out[4]//TableForm= ",ExpressionUUID -> "d2d188df-a101-41e8-b6a2-05166d393921"]},
+Open],ExpressionUUID -> "ddcf11d0-c3c6-404b-8dff-d2c90786c339"]},StyleDefinitions -> "Default.nb",
+FrontEndVersion -> "14.3 for Wolfram Cloud 1.73 (July 23, 2025)"]

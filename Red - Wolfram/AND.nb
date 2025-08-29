@@ -1,0 +1,30 @@
+Notebook[{Cell[
+CellGroupData[{Cell[
+BoxData[{RowBox[{RowBox[{"inputs"," ","="," ",RowBox[
+{"{",RowBox[{RowBox[{"{",RowBox[{"0.",",","0."}],"}"}],",",RowBox[{"{",RowBox[{"0.",",","1."}],"}"}],",",RowBox[
+{"{",RowBox[{"1.",",","0."}],"}"}],",",RowBox[{"{",RowBox[{"1.",",","1."}],"}"}]}],"}"}]}],";"}],"\n",RowBox[
+{RowBox[{"salidaAND"," ","="," ",RowBox[{"{",RowBox[{"0.",",","0.",",","0.",",","1."}],"}"}]}],";"}],RowBox[
+{"\n","\n"}],RowBox[{RowBox[{"redAND"," ","="," ",RowBox[{"NetTrain","[","\n","  ",RowBox[
+{RowBox[{"NetChain","[",RowBox[{"{",RowBox[{RowBox[{"LinearLayer","[","1","]"}],","," ","LogisticSigmoid"}],"}"}],"]"}],",","\n","  ",RowBox[
+{"Thread","[",RowBox[{"inputs"," ","\[Rule]"," ","salidaAND"}],"]"}]}],"\n","]"}]}],";"}],RowBox[
+{"\n","\n"}],RowBox[{"TableForm","[","\n","  ",RowBox[{RowBox[{"Table","[","\n","    ",RowBox[
+{RowBox[{"{",RowBox[{RowBox[{"inputs","[",RowBox[{"[","i","]"}],"]"}],","," ",RowBox[
+{"salidaAND","[",RowBox[{"[","i","]"}],"]"}],","," ",RowBox[{"Round","[",RowBox[{"redAND","[",RowBox[
+{"inputs","[",RowBox[{"[","i","]"}],"]"}],"]"}],"]"}]}],"}"}],",","\n","    ",RowBox[
+{"{",RowBox[{"i",","," ",RowBox[{"Length","[","inputs","]"}]}],"}"}]}],"\n","  ","]"}],",","\n","  ",RowBox[
+{"TableHeadings"," ","\[Rule]"," ",RowBox[{"{",RowBox[{"None",","," ",RowBox[{"{",RowBox[
+{"\"x1,x2\"",","," ","\"AND Real\"",","," ","\"AND Pred\""}],"}"}]}],"}"}]}]}],"\n","]"}]}],
+"Input",CellLabel -> "In[3]:= ",ExpressionUUID -> "d25f19c5-80e9-4726-95a5-dfb1a9bd7321"],Cell[
+BoxData[
+InterpretationBox[GridBox[{{"\"x1,x2\"","\"AND Real\"","\"AND Pred\""},{GridBox[{{"0.`"},{"0.`"}},
+RowAlignments -> Baseline,ColumnAlignments -> Left,RowSpacings -> 0.25`,ColumnSpacings -> 1],"0.`","0"},{GridBox[
+{{"0.`"},{"1.`"}},RowAlignments -> Baseline,ColumnAlignments -> Left,RowSpacings -> 0.25`,
+ColumnSpacings -> 1],"0.`","0"},{GridBox[{{"1.`"},{"0.`"}},RowAlignments -> Baseline,
+ColumnAlignments -> Left,RowSpacings -> 0.25`,ColumnSpacings -> 1],"0.`","0"},{GridBox[
+{{"1.`"},{"1.`"}},RowAlignments -> Baseline,ColumnAlignments -> Left,RowSpacings -> 0.25`,
+ColumnSpacings -> 1],"1.`","1"}},RowAlignments -> Baseline,ColumnAlignments -> Center,
+RowSpacings -> 1,ColumnSpacings -> 3],TableForm[{{{0.`,0.`},0.`,0},{{0.`,1.`},0.`,0},{{1.`,0.`},0.`,0},{{1.`,1.`},1.`,1}},
+TableHeadings -> {None,{"x1,x2","AND Real","AND Pred"}}]],StandardForm],"Output",
+CellLabel -> "Out[6]//TableForm= ",ExpressionUUID -> "42925acb-d74b-44f1-8567-cc360cf7666b"]},
+Open],ExpressionUUID -> "417f5942-9e37-46c3-821c-418eb82b18e8"]},StyleDefinitions -> "Default.nb",
+FrontEndVersion -> "14.3 for Wolfram Cloud 1.73 (July 23, 2025)"]
